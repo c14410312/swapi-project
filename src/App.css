@@ -1,24 +1,95 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: white;
+  padding: 0;
+  color: black;
+  /*font-family: $body-font;
+  font-size: $body-font-size;*/
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.header {
+  display: flex;
+  padding: 0 5px;
+  width: 100%;
+  color: white;
+  flex-direction: row;
+}
+
+.content {
+  padding: 5px;
+  width: 100%;
+}
+
+/*SEARCH CSS*/
+.search {
+  width:100%;
+  height: 50px;
+  display: flex;
+  padding: 20px;             
+  align-items: center;
+  flex-grow: 2;
+  flex-direction: column;
+}
+
+.search-title {
+  font-size: 2.6rem;
+}
+
+.search-subtitle {
+  margin-top: 10px;
+  text-align: center;
+  line-height: 1.5rem;
+  color: light-grey;
+  font-size: 1.2rem;
+}
+
+
+.input-box {
+  position: relative;
+  margin-top: 20px;
+  width: 100%;
+}
+.result-item{
+
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 5px;
+  margin: 10px;
+  text-align: left;
+}
+
+.result-item > h1, h2, h3{
   text-align: center;
 }
+input {
+  border: 0;
+  border-bottom: 1px solid grey;
+  border-radius: 0;
+  background: transparent;
+  padding: 10px 20px 10px 30px;
+  text-align: center;
+  width: 100%;
+  color: black;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 1.125rem;
+  -webkit-appearance: none;
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  &:focus {
+    outline: blue;
+    outline-color: blue;
+  }
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.results{
+  float: right;
+  width:100%;
 }
